@@ -31,16 +31,6 @@ export const reducer = (state = INITIAL_STATE, action) => {
             case "ADD_COMMENTARY":
       return { ...state, commit: [...state.commit, action.payload] };
 
- case "DELETE_COMENTS":
-      return {
-        ...state,
-        commit: state.commit.filter((todo, id) => {
-          if (todo.id == !id) {
-            return todo;
-          }
-          return id;
-        }),
-      };
 
       case "SET_PAGE":
       return { ...state, page: action.payload };
@@ -74,15 +64,6 @@ const TodosContextProvider = ({ children }) => {
         dispatch({
           type: "ADD_COMMENTARY",
           payload: data,
-        });
-      };
-
-      const deleteComents = async (id) => {
-        await axios.delete(`http://localhost:8000/comenturys/${id}`);
-    
-        dispatch({
-          type: "DELETE_COMENTS",
-          payload: id,
         });
       };
 
@@ -125,7 +106,6 @@ const TodosContextProvider = ({ children }) => {
         rating,
          getCommetaty,
          addComent,
-         deleteComents,
          setPage,
          getPagination,
         
