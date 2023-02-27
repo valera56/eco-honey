@@ -1,0 +1,30 @@
+.plaginetion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    
+    height: 50px;
+}
+
+.plagin {
+    
+    width: 10px;
+height: 10px;
+margin: 10px;
+
+}
+
+.active {
+    background-color: #FFA500;
+    color: green;
+    border-color: #FFA500;
+    border-radius: 50%;
+}
+
+.nooy_active {
+   border-radius: 50%;
+   border-color:#FFD877;
+   background-color: #FFD877;;
+   color: green;
+
+}

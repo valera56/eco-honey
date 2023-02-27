@@ -1,0 +1,209 @@
+@media (max-width: 1920px) {
+    .list_coments {
+      display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+        max-width: 380px;
+        max-height: 261px;
+      }
+
+      .inpName {
+        margin: 10px;
+        width: 150px;
+        height: 30px;
+
+      }
+      
+      .inpcommit {
+        width: 150px;
+        height: 30px;
+      }
+
+      .bnt_add {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+      }
+      
+      .x {
+        
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+      
+
+      .block_coment2 {
+        
+        top: 65px;
+        height: 40px;
+      }
+      
+
+}
+
+@media (max-width: 1250px) {
+    .list_coments {
+        max-width: 320px;
+        max-height: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+      }
+
+      .inpName {
+        margin: 10px;
+        width: 150px;
+        height: 30px;
+
+      }
+      
+      .inpcommit {
+        width: 150px;
+        height: 30px;
+      }
+
+      .bnt_add {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+      }
+      
+      .x {
+        
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+      
+
+      .block_coment2 {
+        
+        top: 65px;
+        height: 40px;
+      }
+      
+    
+      .ul_coment {
+        
+        margin-top: 40px;
+      }
+}
+
+@media (max-width: 1000px) {
+    .list_coments {
+        max-width: 290px;
+        max-height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+      }
+
+      .inpName {
+        margin: 10px;
+        width: 120px;
+        height: 20px;
+
+      }
+      
+      .inpcommit {
+        width: 120px;
+        height: 20px;
+      }
+
+      .bnt_add {
+        width: 60px;
+        height: 20px;
+        margin: 10px;
+      }
+      
+      .x {
+        
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+      
+
+      .block_coment2 {
+        
+        top: 65px;
+        height: 40px;
+      }
+      
+    
+      .ul_coment {
+        
+        margin-top: 40px;
+      }
+}
+
+@media (max-width: 800px) {
+    .list_coments {
+        max-width: 100%;
+        max-height: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+       
+      }
+
+      .inpName {
+        margin: 10px;
+        width: 120px;
+        height: 20px;
+
+      }
+      
+      .inpcommit {
+        width: 120px;
+        height: 20px;
+      }
+
+      .bnt_add {
+        width: 60px;
+        height: 20px;
+        margin: 10px;
+      }
+      
+      .x {
+        
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+      
+
+
+      .block_coment2 {
+        
+        top: 65px;
+        height: 40px;
+      }
+      
+    
+      .ul_coment {
+        
+        margin-top: 40px;
+      }
+
+      .plaginetion {
+        width: 100%;
+        align-items: center;
+        position: relative;
+        bottom: 5px;
+      }
+}
+
