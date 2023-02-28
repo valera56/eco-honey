@@ -4,7 +4,7 @@ import ListComentury from "../ListComentury/ListComentury";
 import "../AddComentury/AddComentury.css";
 import PlaginetionCommit from "../PlaginetionCommit/PlaginetionCommit";
 import GrateStar from "../GrateStar/GrateStar";
-import "../AddComentury/Media.css"
+import "../AddComentury/Media.css";
 function AddComentury() {
   const { commit, getCommetaty, addComent, rating } = useContext(todosContext);
   const [isCometyru, setIsCometyru] = useState(false);
@@ -65,9 +65,9 @@ function AddComentury() {
           </div>
         )}
 
-        {commit.map((coment ) => {
-          console.log(coment.id)
-          return <ListComentury coment={coment} key={coment.id} />; 
+        {commit.map((coment) => {
+          console.log(coment.id);
+          return <ListComentury coment={coment} key={coment.id} />;
         })}
       </ul>
 

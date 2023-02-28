@@ -1,0 +1,9 @@
+@media (max-width: 901px) {
+    .img_second {
+        order: 2;
+      }
+      
+      .content_second {
+        order: 1;
+      }
+}

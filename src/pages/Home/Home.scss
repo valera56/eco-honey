@@ -1,0 +1,163 @@
+.home {
+    padding-top: 16px;
+    padding-bottom: 120px;
+
+    .container {
+        background-image: url("../../Assets/images/bg.png");
+        max-width: 1280px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__content {}
+
+    &__img {}
+
+    &__images {}
+
+    &__title {
+        padding-top: 16px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+    }
+
+    &__title-light {
+        color: $background-color;
+    }
+
+    &__text {
+        padding-top: 24px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__btn {
+        margin-top: 64px;
+        margin-bottom: 25px;
+        width: 240px;
+        height: 72px;
+        border: none;
+        border-radius: 8px;
+        background-color: $text-color;
+        cursor: pointer;
+    }
+
+    &__btn-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $background-color
+    }
+
+    @media (max-width: 1024px) {
+        &__container {
+            justify-content: space-around;
+        }
+
+        &__img {
+            display: flex;
+            align-items: center;
+        }
+
+        &__images {
+            max-width: 328px;
+            max-height: 328px;
+        }
+
+        &__title {
+            padding-top: 16px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__text {
+            padding-top: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+        &__btn-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+
+    }
+
+    @media (max-width: 768px) {
+        &__images {
+            max-width: 328px;
+            max-height: 328px;
+        }
+    }
+
+    @media (max-width: 628px) {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__content {
+            order: 2;
+        }
+
+        &__title {
+            padding-top: 16px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__title-light {
+            color: $background-color;
+        }
+
+        &__text {
+            padding-top: 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: $text-color;
+        }
+
+        &__btn {
+            width: 342px;
+            height: 72px;
+            border: none;
+            border-radius: 8px;
+            background-color: $text-color;
+            cursor: pointer;
+        }
+
+        &__btn-text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $background-color
+        }
+    }
+
+    @media (max-width: 360px) {
+        &__btn {
+            width: 280px;
+            height: 72px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        padding-top: 0;
+        padding-bottom: 67px;
+    }
+}

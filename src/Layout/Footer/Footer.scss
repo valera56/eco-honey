@@ -1,0 +1,82 @@
+.footer {
+    padding: 80px 0;
+    background-color: $text-color;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 17.7px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 8px;
+    }
+
+    &__title {
+        color: $main-color ;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+    }
+
+    &__list {
+        padding-top: 24px;
+    }
+
+    &__text {
+        color: $background-color;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    &__link {
+        color: $background-color;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__social {
+        display: flex;
+        gap: 12px;
+    }
+   
+    @media (max-width: 1100px) {
+        &__img {
+           width: 56px;
+           height: 56px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+        }
+
+        &__text {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 120%;
+        }
+
+        &__link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+    @media (max-width: 1024px) {
+       &__nav {
+        flex-wrap: wrap;
+       }
+    }
+    @media (max-width: 860px) {
+        &__nav {
+         flex-direction: column;
+        }
+     }
+}

@@ -1,0 +1,108 @@
+.products {
+    padding-bottom: 120px;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__category {
+        padding-top: 64px;
+        display: flex;
+        gap: 24px;
+    }
+
+    select {
+        display: flex;
+        padding: 16px 23px 16px 16px;
+        justify-content: center;
+        font-family: "Nunito Sans";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: $text-color;
+        background: #FFFFFF;
+        border: 1px solid $main-color;
+        border-radius: 16px;
+        outline: none;
+    }
+
+    &__option-sort {
+        width: 199px;
+        height: 57px;
+    }
+
+    &__option-category {
+        width: 158px;
+        height: 57px;
+    }
+
+    &__column {
+        padding-top: 88px;
+        display: grid;
+        grid-template-columns: repeat(4, 235px);
+        grid-template-rows: repeat(2, 385px);
+        justify-content: space-between;
+        grid-row-gap: 88px;
+    }
+
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid #FFA500;
+        border-radius: 16px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        padding-top: 8px;
+    }
+
+    &__flex {
+        display: flex;
+        padding: 0 8px;
+        justify-content: space-between;
+    }
+
+    &__text-title {
+        padding: 16px 8px 8px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        padding: 16px 8px 8px;
+
+        button {
+            font-family: 'Nunito Sans';
+            width: 219px;
+            height: 56px;
+            background: $secondary-color;
+            border-radius: 16px;
+            border: none;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            font-style: normal;
+            color: $text-color;
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .products {
+            padding-bottom: 80px;
+        }
+        &__category  {
+            padding-top: 40px;
+        }
+        &__column {
+            padding-top: 64px;
+            grid-row-gap: 64px;
+        }
+    }
+}

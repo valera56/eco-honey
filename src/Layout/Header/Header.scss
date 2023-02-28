@@ -1,0 +1,100 @@
+.header {
+   padding: 16px 0;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+   }
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 8px;
+   }
+
+   &__logo {
+      color: $main-color;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+   }
+
+
+   &__link {
+      color: $text-color;
+      font-weight: 400px;
+      font-size: 18px;
+      line-height: 140%;
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: $main-color;
+            font-size: 18px;
+            line-height: 120%;
+            transition: color .2s;
+         }
+      }
+   }
+
+   &__burger-btn {
+      display: none;
+   }
+
+   @media (max-width: 1024px) {
+      &__burger-btn {
+         display: block;
+         z-index: 9;
+         position: fixed;
+         top: 25px;
+         right: 32px;
+         border: 0;
+         background-color: transparent;
+      }
+
+      &__list {
+         display: none;
+      }
+
+      &__open &__list {
+         position: fixed;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: $background-color;
+         z-index: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         row-gap: 40px;
+         font-weight: 400;
+         font-size: 24px;
+         line-height: 120%;
+
+         @media (any-hover: hover) {
+            &:hover {
+               color: $main-color;
+               font-size: 24px;
+               line-height: 120%;
+               transition: color .2s;
+            }
+         }
+      
+      }
+   }
+}

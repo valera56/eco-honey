@@ -1,0 +1,105 @@
+.about {
+    padding-bottom: 120px;
+
+    &__us {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__col {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__info {
+        padding-top: 127px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__text {
+        padding-top: 32px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: $text-color;
+    }
+
+    &__honey {
+        padding-top: 64px;
+    }
+
+    &__btn {
+        margin-top: 32px;
+        font-family: 'Nunito Sans';
+        width: 219px;
+        height: 56px;
+        background: $secondary-color;
+        border-radius: 16px;
+        border: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        font-style: normal;
+        color: $text-color;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+        &__info {
+            padding-top: 107px;
+        }
+        &__honey {
+            padding-top: 74px;
+        }
+        &__honey-img {
+            width: 342px;
+            height: 342px;
+        }
+        &__us {
+            font-size: 32px;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__col {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 360px) {
+        &__honey-img {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        padding-bottom: 80px;
+    }
+}

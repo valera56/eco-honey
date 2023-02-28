@@ -1,0 +1,107 @@
+.delivery {
+    padding-bottom: 120px;
+
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__honey {
+        padding-top: 83px;
+    }
+
+    &__info {
+        padding-top: 64px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__title-text {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__text {
+        padding-top: 32px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: $text-color;
+    }
+
+    &__btn {
+        margin-top: 75px;
+        font-family: 'Nunito Sans';
+        width: 219px;
+        height: 56px;
+        background: $secondary-color;
+        border-radius: 16px;
+        border: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        font-style: normal;
+        color: $text-color;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+        &__btn {
+            padding-top: 24px;
+        }
+        &__honey {
+            padding-top: 40px;
+        }
+        &__content {
+            gap: 20px;
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%
+        }
+
+        &__title-text {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__text {
+            padding-top: 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+        }
+        &__honey-img {
+            width: 342px;
+            height: 342px;
+        }
+    }
+    @media (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__honey-img {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .delivery {
+        padding-bottom: 80px;
+    }
+}
