@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 export const todosContext = createContext();
 
+
 const INITIAL_STATE = {
   products: [],
   currentProduct: {},
@@ -14,14 +15,16 @@ const INITIAL_STATE = {
   limit: 3,
   page: 1,
   totalCount: 0,
+  totalComent: 0,
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
+  
   switch (action.type) {
     case "GET_COMMENTATY":
       return {
         ...state,
-        commit: action.payload.data,
+        commit: action.payload,
         totalCount: action.payload.totalCount,
       };
 
@@ -35,7 +38,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         products: action.payload.data,
-        totalCount: action.payload.totalCount,
+        totalComent: action.payload. totalComent,
       };
     case "GET_CURRENT_PRODUCT":
       return { ...state, currentProduct: action.payload };
@@ -133,24 +136,25 @@ const TodosContextProvider = ({ children }) => {
   const [rating, setRating] = useState(3);
 
   const getCommetaty = async () => {
-    const { data, headers } = await axios(
-      `http://localhost:8000/comenturys${history.location.search}`
-    );
-
+    const { data} = await axios (
+      `http://18.182.53.101/api/feedbacks${history.location.search}` );
+      console.log(data.results)
     dispatch({
       type: "GET_COMMENTATY",
       payload: {
-        data: data,
-        totalCount: Number(headers["x-total-count"]),
+        data: data.results, 
+       totalCount: data.count
       },
     });
   };
 
   const addComent = async (obj) => {
-    const { data } = await axios.post(`http://localhost:8000/comenturys`, obj);
+    const { data } = await axios.post(`http://18.182.53.101/api/feedbacks/`, obj);
+  
     dispatch({
       type: "ADD_COMMENTARY",
-      payload: data,
+      payload: data.results,
+
     });
   };
 
@@ -161,7 +165,7 @@ const TodosContextProvider = ({ children }) => {
     } else {
       search.delete(key);
     }
-    history.push(`/comentury?${search.toString()}`);
+    history.push(`/todos?${search.toString()}`);
   };
 
   const getPagination = (value) => {
@@ -170,7 +174,7 @@ const TodosContextProvider = ({ children }) => {
     getCommetaty();
   };
 
-  const setPage = (page) => {
+  const setPage = async (page) => {
     dispatch({
       type: "SET_PAGE",
       payload: page,

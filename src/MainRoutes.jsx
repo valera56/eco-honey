@@ -13,8 +13,7 @@ const MainRoutes = () => {
     return (
         <BrowserRouter>
         <TodosContextProvider>
-            <Header/>
-           <Main/>
+            
             <Switch>
                 <Route exact path = "/">
                     <ProductList/>
@@ -22,7 +21,10 @@ const MainRoutes = () => {
                 <Route exact path="/cart">
                    <CartPage />
                 </Route>
-                
+                <Route exact path="/todos">
+                   <Header/>
+                    <Main/>
+                </Route>
             </Switch>
             <Footer/>          
             </TodosContextProvider>

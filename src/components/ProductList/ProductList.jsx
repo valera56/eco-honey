@@ -7,7 +7,7 @@ const ProductList =() => {
     const { products, getProducts} = useContext(todosContext)
 
     useEffect(() => {
-        getProducts()
+        // getProducts()
     })
 
     return (

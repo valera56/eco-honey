@@ -15,13 +15,17 @@ function AddComentury() {
     getCommetaty();
   }, []);
 
-  const handleClick = () => {
+
+     const handleClick = () => {
     setIsCometyru(false);
     const obj = {
-      name: inpValueName,
-      comment: inpValueComent,
-      valueStar: rating,
-    };
+      username: inpValueName,
+      text: inpValueComent,
+      mark: rating,
+    }; 
+  
+
+  
     addComent(obj);
     setInpValueName("");
     setInpValueComent("");
@@ -64,11 +68,10 @@ function AddComentury() {
             </button>
           </div>
         )}
-
-        {commit.map((coment) => {
-          console.log(coment.id);
+       
+       {commit.data ? commit.data.map((coment) => {
           return <ListComentury coment={coment} key={coment.id} />;
-        })}
+          }): " "}
       </ul>
 
       <div className="plaginetion">

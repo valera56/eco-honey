@@ -4,12 +4,12 @@ import "../PlaginetionCommit/PlaginetionCommit.css"
 function PlaginetionCommit() {
 
 
-    const {limit, totalCount, page, setPage ,getPagination} = useContext(todosContext)
+    const {limit,  page, setPage ,getPagination , totalCount} = useContext(todosContext)
 
     useEffect(() => {
         getPagination(page);
       }, [page]);
-      const pageLength = Math.ceil(totalCount / limit);
+      const pageLength = Math.ceil( totalCount / limit);
   return (
     pageLength &&
     [...Array(pageLength).keys()].map((el) => (

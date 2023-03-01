@@ -6,7 +6,7 @@ const ProductItem = (props) => {
     const {addToCart} = useContext(todosContext) 
 
     const handleAddClick = () => {
-        addToCart(props.product)
+        // addToCart(props.product)
     }
 
     return (
