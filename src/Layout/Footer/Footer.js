@@ -12,16 +12,6 @@ const Footer = () => {
                             <h1 className='footer__title'>Eco Honey</h1>
                         </div>
                     </div>
-                    <div className="footer__basic">
-                        <h4 className='footer__text'>Основное</h4>
-                        <ul className='footer__list'>
-                            <li className="footer__item"><a href="#" className="footer__link">Главная</a></li>
-                            <li className="footer__item"><a href="#" className="footer__link">Продукты</a></li>
-                            <li className="footer__item"><a href="#" className="footer__link">О нас</a></li>
-                            <li className="footer__item"><a href="#" className="footer__link">Отзывы</a></li>
-                            <li className="footer__item"><a href="#" className="footer__link">Доставка и оплата</a></li>
-                        </ul>
-                    </div>
                     <div className="footer__links">
                         <h4 className='footer__text'>Полезные ссылки</h4>
                         <ul className='footer__list'>

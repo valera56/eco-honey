@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import honey1 from '../../Assets/images/polygon1.png'
 
 const About = () => {
+    const handleClick= () => {
+        window.scrollTo(0,0)
+    }
     return (
         <section className='about'>
             <div className="about__container">
@@ -18,7 +22,7 @@ const About = () => {
                     мы смогли увеличить количество пчелиных семей с 16-ти до <br />
                     235.
                     </p>
-                    <button className='about__btn'>Подробнее</button>
+                    <button onClick={handleClick} className='about__btn'><Link to={"/about"}>Подробнее</Link></button>
                     </div>
                     <div className="about__honey">
                     <img className='about__honey-img' src={honey1} alt="Honey" />

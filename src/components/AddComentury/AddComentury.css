@@ -33,7 +33,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  top: 65px;
+  top: 1650px;
   height: 40px;
 }
 
@@ -84,10 +84,11 @@ li {
 
 .block_add {
   display: flex;
+  justify-content: center;
   width: 200px;
   height: 30px;
   position: absolute;
-  top: 65px;
+  top: 1650px;
 }
 
 .reviews {

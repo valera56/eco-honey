@@ -4,6 +4,28 @@ import basket from "../../Assets/images/basket.svg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const handleClick = () => {
+   window.scrollTo(950,950)
+    
+  }
+
+  const handleClickq = () => {
+    window.scrollTo(800,800)
+     
+   }
+    const handleClick3 = () => {
+    window.scrollTo(1550,1550)
+     
+   }
+    const handleClick4 = () => {
+    window.scrollTo(2900,2900)
+     
+   } 
+   const handleClick5 = () => {
+    window.scrollTo(0,0)
+     
+   } 
+   
   return (
     <header className="header">
       <div className="container">
@@ -17,37 +39,39 @@ const Header = () => {
         </div>
         <nav className="header__nav">
           <ul className="header__list">
-            <Link className="header__item">
-              <a href="#" className="header__link">
+            <Link onClick={handleClick5} to={"/todos"} className="header__item">
+              <a  className="header__link">
                 Главная
               </a>
             </Link>
-            <Link className="header__item">
-              <a href="#" className="header__link">
+            <Link to={'/catalog'} className="header__item">
+              <a onClick={handleClick} href='' className="header__link">
                 Продукты
               </a>
             </Link>
             <Link className="header__item">
-              <a href="#" className="header__link">
+              <a onClick={handleClickq} href='' className="header__link">
                 О нас
               </a>
             </Link>
             <li className="header__item">
-              <a href="#" className="header__link">
+              <a onClick={handleClick3} className="header__link">
                 Отзывы
               </a>
             </li>
             <Link className="header__item">
-              <a href="#" className="header__link">
+              <a onClick={handleClick4} className="header__link">
                 Доставка и оплата
               </a>
             </Link>
           </ul>
-          <a href="#">
+          <a ><Link to={"/cart"}>
             <img src={basket} alt="basket" />
+             </Link>
           </a>
           <button className="header__burger-btn">
-            <svg
+            
+              <svg
               width="24"
               height="22"
               viewBox="0 0 24 22"
@@ -59,6 +83,8 @@ const Header = () => {
                 fill="#1E1E1E"
               />
             </svg>
+           
+            
           </button>
         </nav>
       </div>

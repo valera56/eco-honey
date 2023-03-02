@@ -1,44 +1,10 @@
 .products {
     padding-bottom: 120px;
-
-    &__title {
-        display: flex;
-        
-        justify-content: center;
-    }
-
-    &__category {
-        padding-top: 64px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-    }
-
-    select {
-        display: flex;
-        padding: 16px 23px 16px 16px;
-        justify-content: center;
-        font-family: "Nunito Sans";
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 140%;
-        color: $text-color;
-        background: #FFFFFF;
-        border: 1px solid $main-color;
-        border-radius: 16px;
-        outline: none;
-    }
-
-    &__option-sort {
-        width: 199px;
-        height: 57px;
-    }
-
-    &__option-category {
-        width: 158px;
-        height: 57px;
-    }
-
+   &__listps {
+   display: flex;
+   width: 200px;
+   height: 200px;
+   }
     &__column {
         padding-top: 88px;
         display: grid;

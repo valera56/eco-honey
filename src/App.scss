@@ -17,7 +17,9 @@ body {
     font-family: "Nunito Sans", sans-serif;
     background-color: $background-color;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .container {
     max-width: 1320px;
     width: 100%;
@@ -39,3 +41,4 @@ body {
 @import "pages/About/About";
 @import "pages/Delivery/Delivery";
 @import "Layout/Footer/Footer";
+@import 'pages/ProductsList/ProductsList';

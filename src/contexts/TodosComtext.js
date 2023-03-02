@@ -16,6 +16,7 @@ const INITIAL_STATE = {
   page: 1,
   totalCount: 0,
   totalComent: 0,
+  todos: [],
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -123,6 +124,9 @@ export const reducer = (state = INITIAL_STATE, action) => {
         totalCount: state.totalCount - action.payload,
       };
 
+      case "GET_TODOS":
+      return { ...state, todos: action.payload };
+
     default:
       return state;
   }
@@ -138,7 +142,7 @@ const TodosContextProvider = ({ children }) => {
   const getCommetaty = async () => {
     const { data} = await axios (
       `http://18.182.53.101/api/feedbacks${history.location.search}` );
-      console.log(data.results)
+
     dispatch({
       type: "GET_COMMENTATY",
       payload: {
@@ -165,7 +169,7 @@ const TodosContextProvider = ({ children }) => {
     } else {
       search.delete(key);
     }
-    history.push(`/todos?${search.toString()}`);
+    // history.push(`/todos?${search.toString()}`);
   };
 
   const getPagination = (value) => {
@@ -279,6 +283,17 @@ const TodosContextProvider = ({ children }) => {
     localStorage.getItem("cartItems");
   };
 
+  const getTodos = async () => {
+    const { data, headers } = await axios(`http://18.182.53.101/api/products/`);
+    console.log(data.results)
+    dispatch({
+      type: "GET_TODOS",
+      payload: data.results
+
+    })
+  }
+  
+
   return (
     <todosContext.Provider
       value={{
@@ -290,6 +305,7 @@ const TodosContextProvider = ({ children }) => {
         products: state.products,
         currentProduct: state.currentProduct,
         cart: state.cart,
+        todos: state.todos,
         rating,
         getCommetaty,
         addComent,
@@ -302,6 +318,7 @@ const TodosContextProvider = ({ children }) => {
         getCurrentProduct,
         getCartProducts,
         incrementCartProduct,
+        getTodos,
       }}
     >
       {children}

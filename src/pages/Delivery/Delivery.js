@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import honey2 from '../../Assets/images/polygon2.png'
 
 const Delivery = () => {
+    const handleClick = () => {
+        window.scrollTo(0,0)
+    }
     return (
         <section className='delivery'>
             <div className="delivery__container">
@@ -25,7 +29,7 @@ const Delivery = () => {
                              самовывозе; <br />
                             ⦁	Через банковские карты Visa/Элкарт.
                         </p>
-                        <button className='delivery__btn'>Подробнее</button>
+                        <button onClick={handleClick} className='delivery__btn'><Link to={"/mything"}>Подробнее</Link></button>
                     </div>
                 </div>
             </div>

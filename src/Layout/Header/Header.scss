@@ -4,6 +4,7 @@
    .container {
       display: flex;
       justify-content: space-between;
+     
    }
 
    &__nav {
@@ -12,7 +13,7 @@
       align-items: center;
       gap: 40px;
    }
-
+    
    &__logo {
       display: flex;
       align-items: center;
@@ -39,6 +40,7 @@
       font-weight: 400px;
       font-size: 18px;
       line-height: 140%;
+      scroll-behavior: auto;
 
       @media (any-hover: hover) {
          &:hover {

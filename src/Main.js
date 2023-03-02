@@ -13,7 +13,6 @@ const Main = () => {
     return (
         <main>
            <Home/>
-           <Products/>
            <About/>
            <AddComentury/>
            <Delivery/>
