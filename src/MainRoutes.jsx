@@ -11,6 +11,7 @@ import AboutAss from "./pages/AboutAss/AboutAss";
 import MyThird from "./pages/MyThird/MyThird";
 import DelveruAndPlayment from "./pages/DelveruAndPlayment/DelveruAndPlayment";
 import Products from "./pages/Products/Products";
+import AddComentury from "./components/AddComentury/AddComentury";
 
 const MainRoutes = () => {
     return (
@@ -40,6 +41,10 @@ const MainRoutes = () => {
 
                 <Route exact path="/catalog">
                 <Products/>
+                </Route>
+
+                <Route exact path="/comenturu">
+               <AddComentury/>
                 </Route>
             </Switch>
             <Footer/>          

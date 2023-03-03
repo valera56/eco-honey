@@ -12,7 +12,7 @@ const INITIAL_STATE = {
     cartProducts: [],
   },
   commit: [],
-  limit: 3,
+  limit: 10,
   page: 1,
   totalCount: 0,
   totalComent: 0,
@@ -20,12 +20,11 @@ const INITIAL_STATE = {
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
-  
   switch (action.type) {
     case "GET_COMMENTATY":
       return {
         ...state,
-        commit: action.payload,
+        commit: action.payload.data,
         totalCount: action.payload.totalCount,
       };
 
@@ -141,7 +140,8 @@ const TodosContextProvider = ({ children }) => {
 
   const getCommetaty = async () => {
     const { data} = await axios (
-      `http://18.182.53.101/api/feedbacks${history.location.search}` );
+      `http://18.182.53.101/api/feedbacks/${history.location.search}` );
+
 
     dispatch({
       type: "GET_COMMENTATY",
@@ -154,10 +154,10 @@ const TodosContextProvider = ({ children }) => {
 
   const addComent = async (obj) => {
     const { data } = await axios.post(`http://18.182.53.101/api/feedbacks/`, obj);
-  
+    console.log(data)
     dispatch({
       type: "ADD_COMMENTARY",
-      payload: data.results,
+      payload: data,
 
     });
   };
@@ -169,7 +169,7 @@ const TodosContextProvider = ({ children }) => {
     } else {
       search.delete(key);
     }
-    // history.push(`/todos?${search.toString()}`);
+    history.push(`/todos?${search.toString()}`);
   };
 
   const getPagination = (value) => {

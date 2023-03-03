@@ -7,6 +7,7 @@ import GrateStar from "../GrateStar/GrateStar";
 import "../AddComentury/Media.css";
 function AddComentury() {
   const { commit, getCommetaty, addComent, rating } = useContext(todosContext);
+  console.log(commit, "commit")
   const [isCometyru, setIsCometyru] = useState(false);
   const [inpValueName, setInpValueName] = useState("");
   const [inpValueComent, setInpValueComent] = useState("");
@@ -69,7 +70,7 @@ function AddComentury() {
           </div>
         )}
        
-       {commit.data ? commit.data.map((coment) => {
+       {commit ? commit.map((coment) => {
           return <ListComentury coment={coment} key={coment.id} />;
           }): " "}
       </ul>
