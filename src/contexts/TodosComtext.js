@@ -68,33 +68,29 @@ export const reducer = (state = INITIAL_STATE, action) => {
         totalCount: state.totalCount + 1,
       };
 
-    case "INCREMENT_CART_PRODUCT":
+      case "INCREMENT_CART_PRODUCT": 
       return {
-        ...state,
-        cart: {
-          cartProducts: [
-            ...state.cart.cartProducts.map((cartProduct) => {
-              if (cartProduct.id === action.payload.id) {
-                return {
-                  ...action.payload,
-                };
-              } else {
-                return {
-                  ...cartProduct,
-                };
-              }
-            }),
-            {
-              ...action.payload,
-              count:
-                (state.cart.cartProducts.find(
-                  (item) => item.id === action.payload.id
-                )?.count || 0) + 1,
-            },
-          ],
-        },
-        totalCount: state.totalCount + 1,
-      };
+          ...state,
+          cart: {
+            cartProducts: [
+              ...state.cart.cartProducts.map((cartProduct) => {
+                if(cartProduct.id === action.payload.id) {
+                  return {
+                    ...action.payload,
+                    count:
+                  (state.cart.cartProducts.find((item) => item.id === action.payload.id)?.count || 0) + 1
+                  };
+                } else {
+                  return {
+                    ...cartProduct
+                  };
+                }
+              }),
+           
+            ]
+          },
+          totalCount: state.totalCount + 1,
+        };
 
     case "REMOVE_FROM_CART":
       const updatedCartProducts = state.cart.cartProducts
