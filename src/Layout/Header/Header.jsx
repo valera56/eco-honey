@@ -2,8 +2,23 @@ import React, { useState } from "react";
 import logo from "../../Assets/images/logo.svg";
 import basket from "../../Assets/images/basket.svg";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 const Header = () => {
+
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = async () => {
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : '')
+    
+  }
+
+  const toggRuleLanguage = async () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'ru' : '')
+    
+  }
+  
+
+
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -35,26 +50,28 @@ const Header = () => {
         <nav className="header__nav">
           <ul className="header__list">
             <Link onClick={handleClick5} to={"/todos"} className="header__item">
-              <a className="header__link">Главная</a>
+              <a className="header__link">{t("home")}</a>
             </Link>
             <Link to={"/catalog"} className="header__item">
               <a onClick={handleClick} href="" className="header__link">
-                Продукты
+               {t("Products")}
               </a>
             </Link>
             <Link className="header__item">
               <a onClick={handleClickq} href="" className="header__link">
-                О нас
+               {t("About Us")}
               </a>
             </Link>
-            <Link to={"/comenturu"} className="header__item">
-              <a className="header__link">Отзывы</a>
-            </Link>
+            
             <Link className="header__item">
               <a onClick={handleClick4} className="header__link">
-                Доставка и оплата
+               {t("Shipping and payment")}
               </a>
             </Link>
+          </ul>
+          <ul>
+            <button onClick={toggleLanguage} className="button__en">en</button>
+            <button onClick={toggRuleLanguage} className="button__ry">ру</button>
           </ul>
           <a>
             <Link to={"/cart"}>

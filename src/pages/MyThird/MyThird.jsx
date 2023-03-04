@@ -1,58 +1,60 @@
 import React from 'react'
 import locaionMap from './img/image 6.svg'
 import "../MyThird/MyThird.css"
+import { useTranslation } from 'react-i18next';
 function MyThird() {
+  const { t } = useTranslation();
   return (
         <div className="container">
       <div className='head_about_us'>
-        <h1>О нас</h1>
+        <h1> {t("About Us")} </h1>
       </div>
       <div className='content_about_us'>
         <h3
-        >Добро пожаловать на Eco honey!</h3>
+        > {t("Welcome to Eco honey!")} </h3>
         <p>
-          Eco honey – это семейное производство медовой продукции. Изначально мы производили мед для себя, после начали делиться им и с<br /> другими желающими.
+          {t("Eco honey is a family-owned production of honey products. Initially, we produced honey for ourselves, after that we began to share it with")} <br /> {t("others who wish.")}
         </p>
         <p>
-          Наша пасека существует с мая 1996 года, основал ее мой отец – Жуматаев Эрик Аскарбекович. За эти 26 лет производство меда стало для <br /> нас не просто семейным бизнесом, а делом всей жизни!
+          {t("Our apiary has existed since May 1996, it was founded by my father, Zhumataev Eric Askarbekovich. During these 26 years, honey production has become")} <br /> {t("us not just a family business, but a lifelong business!")}
         </p>
         <p>
-          Наша миссия – оздаравливать население, предоставляю чистейший высокогорный мед.
+          {t("Our mission is to heal the population, I provide the purest high-mountain honey.")}
         </p>
         <p>
-          В чем уникальность меда Eco honey?
+          {t("What is the uniqueness of Eco honey?")}
         </p>
         <ul>
           <li>
-            Экологичность: мы держим пасеку исключительно на высокогорных жайлоо Гүдү и Чоң-Дөбө Джалал-Абадской обл.
+           {t("Environmental friendliness: we keep an apiary exclusively on the high-mountain jailoo Gudu and Chon-Dobo of the Jalal-Abad region.")}
           </li>
           <li>
-            0% примесей: мы не добавляем сахар и пр.примеси в мед.
+            {t("0% impurities: we do not add sugar and other impurities to honey.")}
           </li>
           <li>
-            Доступная цена: так как мы являемся производителями, цены у нас ниже, чем у посредников.
+            {t("Affordable price: since we are manufacturers, our prices are lower than those of intermediaries.")}
           </li>
         </ul>
-        <p>Какие породы пчел содержатся в пасеке?</p>
+        <p> {t("What breeds of bees are kept in the apiary?")} </p>
         <p>
-          Сейчас содержим породы Карника и Бакфаст – миролюбивые европейские породы пчел, хорошо переносящие высокогорье.
+          {t("Now we keep the Karnika and Buckfast breeds - peaceful European breeds of bees that tolerate high mountains well.")}
         </p>
         <p>
-          Ранее так же работали со среднерусской и карпатской породами.
+          {t("Previously, they also worked with Central Russian and Carpathian breeds.")}
         </p>
         <p>
-          За 26 лет работы смогли увеличить количество пчелиных семей с 16-ти до 235.
+          {t("For 26 years of work, they were able to increase the number of bee colonies from 16 to 235.")}
         </p>
       </div>
       <div className='head_shipping_and_payment'>
-        <h1>Доставка и оплата</h1>
+        <h1> {t("Shipping and payment")} </h1>
       </div>
       <div className='content_shipping_and_payment'>
-      <p>Мы предлагаем быстрые и надежные варианты доставки:</p>
+      <p> {t("We offer fast and reliable delivery options:")} </p>
       <ul>
-        <li> Самовывоз - выберите «Самовывоз» при оформлении заказа, мы его подготовим и вы сможете забрать заказ по адресу:<br /> Кыргызстан, Джалал-Абадская обл., г.Кара-Куль, ул.Торокулова, участок 38.</li>
+        <li> {t("Pickup - select Pickup when placing an order, we will prepare it and you can pick up the order at:")} <br /> {t("Kyrgyzstan, Jalal-Abad region, Kara-Kul city, Torokulova street, section 38.")} </li>
       </ul>
-      <p>Как вас найти?</p>
+      <p> {t("How can I find you?")} </p>
       </div>
       <br /><br/><br /><br/><br /><br/>
       <div className='img_shopping_and_payment'>
@@ -62,16 +64,15 @@ function MyThird() {
       </div><br /><br/><br/>
       <div className='courier_info'>
         <ul>
-          <li>Через службы доставки – Аманат роуд, Ылдам экспресс. Доставка от 200 сом и более.</li>
+          <li> {t("Through delivery services - Amanat Road, Yldam Express. Delivery from 200 soms and more.")} </li>
         </ul>
         <p>
-          Так же при оформлении заказа выберете “через службу доставки”, мы подготовим ваш заказ и отправим через курьера.
-          Если вы оплачиваете за заказ наличными, денежные средства нужно будет отдать курьеру. И оплатить стоимость доставки.<br />
-          Способы оплаты:
+          {t("Also, when placing an order, select “via delivery service”, we will prepare your order and send it via courier. If you pay for the order in cash, the money will need to be given to the courier. And pay the shipping cost.")} <br />
+          {t("Payment Methods:")}
         </p>
         <ul>
-          <li>Наличными: курьеру – при доставке, продавцу – при самовывозе;</li>
-          <li>Через банковские карты Visa/Элкарт</li>
+          <li> {t("⦁ Cash: to the courier - upon delivery, to the seller - upon")} {t("pickup;")} </li>
+          <li> {t("⦁ Via Visa/Elcart bank cards.")} </li>
         </ul>
       </div>
     </div>

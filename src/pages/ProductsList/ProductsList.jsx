@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useTranslation } from 'react-i18next';
+import { todosContext } from '../../contexts/TodosComtext'
 
 function ProductsList(props) {
+    const { t } = useTranslation();
+const {addToCart} = useContext(todosContext)
+const handeleClick = () => {
+    addToCart(props.todo)
+}
+
   return (
     <div className='productlist__listps'>
           <div className="products__column">
@@ -16,7 +24,7 @@ function ProductsList(props) {
                                     <span>{props.todo.volume}</span>
                                 </div>
                                 <div className="products__btn">
-                                    <button>Купить</button>
+                                    <button onClick={handeleClick} > {t("Buy")} </button>
                             </div>
                         </div>
                         

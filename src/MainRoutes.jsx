@@ -12,44 +12,45 @@ import MyThird from "./pages/MyThird/MyThird";
 import DelveruAndPlayment from "./pages/DelveruAndPlayment/DelveruAndPlayment";
 import Products from "./pages/Products/Products";
 import AddComentury from "./components/AddComentury/AddComentury";
+import { Suspense } from "react";
 
 const MainRoutes = () => {
     return (
+         <Suspense fallback="">
         <BrowserRouter>
-        <TodosContextProvider>
-            <Header/>
-              
-            <Switch>
-                <Route exact path = "/">
-                    <ProductList/>
-                </Route>
-                <Route exact path="/cart">
-                   
-                   <CartPage />
-                </Route>
-                <Route exact path="/mything">
-                     <DelveruAndPlayment />
+       <TodosContextProvider>
+           <Header/>
+             
+           <Switch>
+               <Route exact path = "/">
+                   <ProductList/>
+               </Route>
+               <Route exact path="/cart">
                   
-                </Route>
-                <Route exact path="/todos">
-                   <Main />
-                </Route>
-                <Route exact path="/about">
-                    <AboutAss/>
-                    <MyThird />
-                </Route>
+                  <CartPage />
+               </Route>
+               <Route exact path="/mything">
+                    <DelveruAndPlayment />
+                 
+               </Route>
+               <Route exact path="/todos">
+                  <Main />
+               </Route>
+               <Route exact path="/about">
+                   <AboutAss/>
+                   <MyThird />
+               </Route>
 
-                <Route exact path="/catalog">
-                <Products/>
-                </Route>
-
-                <Route exact path="/comenturu">
-               <AddComentury/>
-                </Route>
-            </Switch>
-            <Footer/>          
-            </TodosContextProvider>
-        </BrowserRouter>
+               <Route exact path="/catalog">
+               <Products/>
+               </Route>
+               
+           </Switch>
+           <Footer/>          
+           </TodosContextProvider>
+       </BrowserRouter>
+        </Suspense>
+        
     )
 }
 

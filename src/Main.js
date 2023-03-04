@@ -5,10 +5,6 @@ import About from './pages/About/About';
 import Delivery from './pages/Delivery/Delivery';
 import Products from './pages/Products/Products';
 
-
-
-
-
 const Main = () => {
     return (
         <main>

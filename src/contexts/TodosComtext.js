@@ -12,7 +12,7 @@ const INITIAL_STATE = {
     cartProducts: [],
   },
   commit: [],
-  limit: 10,
+  limit: 3,
   page: 1,
   totalCount: 0,
   totalComent: 0,
@@ -141,8 +141,6 @@ const TodosContextProvider = ({ children }) => {
   const getCommetaty = async () => {
     const { data} = await axios (
       `http://18.182.53.101/api/feedbacks/${history.location.search}` );
-
-
     dispatch({
       type: "GET_COMMENTATY",
       payload: {
@@ -154,7 +152,6 @@ const TodosContextProvider = ({ children }) => {
 
   const addComent = async (obj) => {
     const { data } = await axios.post(`http://18.182.53.101/api/feedbacks/`, obj);
-    console.log(data)
     dispatch({
       type: "ADD_COMMENTARY",
       payload: data,
@@ -173,8 +170,8 @@ const TodosContextProvider = ({ children }) => {
   };
 
   const getPagination = (value) => {
-    setQuery("_limit", state.limit);
-    setQuery("_page", value);
+    setQuery("limit", state.limit);
+    setQuery("page", value);
     getCommetaty();
   };
 
@@ -285,7 +282,6 @@ const TodosContextProvider = ({ children }) => {
 
   const getTodos = async () => {
     const { data, headers } = await axios(`http://18.182.53.101/api/products/`);
-    console.log(data.results)
     dispatch({
       type: "GET_TODOS",
       payload: data.results

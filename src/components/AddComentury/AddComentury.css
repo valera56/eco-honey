@@ -33,7 +33,8 @@ li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  top: 1650px;
+ 
+  left: 30px;
   height: 40px;
 }
 
@@ -68,7 +69,7 @@ li {
 
 .bnt_add {
   color: black;
-  background-color: green;
+  background-color: rgb(8, 235, 8);
   border-color: blue;
   width: 80px;
   height: 30px;
@@ -88,7 +89,8 @@ li {
   width: 200px;
   height: 30px;
   position: absolute;
-  top: 1650px;
+ 
+  left: 30px;
 }
 
 .reviews {

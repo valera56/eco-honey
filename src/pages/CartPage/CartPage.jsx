@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { todosContext } from "../../contexts/TodosComtext";
 import "../CartPage/CartPage.css"
 
 const Cart = () => {
-  const {cart, addToCart, removeFromCart, incrementCartProduct} = useContext(todosContext)
+  const {cart, addToCart, removeFromCart,  incrementCartProduct} = useContext(todosContext)
   const [cartProducts, setCartProducts] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const storedCartProducts = localStorage.getItem("cartItems");
     if (storedCartProducts) {
@@ -52,7 +53,7 @@ const Cart = () => {
   return (
     <div className = "cart">
     <div className="cart_top">
-    <h2>Ваша корзина</h2>
+    <h2> {t("Your shopping cart")} </h2>
     </div>
     
       {cart.length === 0 ? (
@@ -81,7 +82,7 @@ const Cart = () => {
           </ul>
           </div>
           <div className="cart_bottom">
-          <button className="cart_btn_buy">Купить</button>
+          <button className="cart_btn_buy"> {t("Buy")} </button>
           </div>
         </>
       )}

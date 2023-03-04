@@ -7,14 +7,12 @@ const ProductList =() => {
     const { products, getProducts} = useContext(todosContext)
 
     useEffect(() => {
-        // getProducts()
+        getProducts()
     })
 
     return (
         <div>
-            <Link to="/cart">Перейти в корзину</Link>
             <ul>
-                <h2> Honey</h2>
                 {products.map((product) => {
                     return <ProductItem key={product.id} product = {product} />
                 })}
