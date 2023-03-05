@@ -4,7 +4,7 @@ import { todosContext } from "../../contexts/TodosComtext";
 import "../CartPage/CartPage.css"
 
 const Cart = () => {
-  const {cart, addToCart, removeFromCart,  incrementCartProduct} = useContext(todosContext)
+  const {cart, addToCart, removeFromCart, todos,  incrementCartProduct, getTodos} = useContext(todosContext)
   const [cartProducts, setCartProducts] = useState([]);
   const { t } = useTranslation();
   useEffect(() => {
@@ -48,6 +48,9 @@ const Cart = () => {
 //   };
 //   const itemCount = cartProducts.reduce((total, item) => total + item.count, 0);
 
+// useEffect(() => {
+//  getTodos()
+// })
 
 
   return (
@@ -62,9 +65,13 @@ const Cart = () => {
         <>
         <div className="cart_main_div">
           <ul>
+
             {cart.cartProducts.map((item) => (
               <li key={item.id}>
-                <img src="../images/product_2.jpg" alt="product" />
+               
+                    <img src={item.image} alt="product" />
+              
+                
                 <div className="cart_details">
                 <span className="cart__product_title">{item.title}</span>
                 <p className="cart_product_description">{item.description}</p>
@@ -73,7 +80,7 @@ const Cart = () => {
                 <div className="cart_btn_quantity">
                 <button onClick={() => removeFromCart(item.id)}>-</button>
                 <span>{item.count}</span>
-                <button onClick={() => addToCart(item)}>+</button>
+                <button onClick={() => incrementCartProduct(item)}>+</button>
                 </div>
                 </div>
                

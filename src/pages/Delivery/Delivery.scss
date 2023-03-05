@@ -55,6 +55,10 @@
         cursor: pointer;
     }
 
+    .delivery__btn a {
+        color: #1e1e1e;
+    }
+
     @media (max-width: 1024px) {
         &__btn {
             padding-top: 24px;

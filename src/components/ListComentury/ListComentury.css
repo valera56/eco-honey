@@ -4,7 +4,7 @@
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 130%;
     margin-top: 20px;
 
@@ -13,7 +13,7 @@
 
 .li_name {
     font-weight: 700;
-font-size: 16px;
+font-size: 22px;
 line-height: 120%;
 color: #000000;
 margin-top: 40px;
@@ -23,7 +23,7 @@ margin-top: 40px;
 .stars {
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 30px;
     color: yellow;
     margin: 10px;
 }

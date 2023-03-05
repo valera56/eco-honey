@@ -77,10 +77,25 @@ li {
 }
 
 .bnt_com {
-  color: black;
+  /* color: black;
   border-color: blue;
   background-color: yellow;
-  font-weight: 700;
+  font-weight: 700; */
+  margin-top: 32px;
+  font-family: "Nunito Sans";
+  width: 219px;
+  height: 56px;
+  background: #FFD877;
+  border-radius: 16px
+;
+  border: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+  color: #1E1E1E;
+  cursor: pointer;
+
 }
 
 .block_add {

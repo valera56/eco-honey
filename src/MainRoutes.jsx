@@ -31,15 +31,24 @@ const MainRoutes = () => {
                </Route>
                <Route exact path="/mything">
                     <DelveruAndPlayment />
-                 
+                  <MyThird />
                </Route>
                <Route exact path="/todos">
                   <Main />
                </Route>
                <Route exact path="/about">
                    <AboutAss/>
-                   <MyThird />
+                  
                </Route>
+               <Route exact path="/stayte">
+               <DelveruAndPlayment />
+                  <MyThird />
+               </Route>
+               <Route exact path="/aboutAss">
+               <AboutAss/>
+               </Route>
+
+
 
                <Route exact path="/catalog">
                <Products/>

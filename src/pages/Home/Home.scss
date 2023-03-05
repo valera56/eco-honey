@@ -48,13 +48,19 @@
         border-radius: 8px;
         background-color: $text-color;
         cursor: pointer;
+  
     }
 
     &__btn-text {
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
-        color: $background-color
+       
+    }
+
+    .home__btn a {
+        text-decoration: none;
+        color: #fefbf6
     }
 
     @media (max-width: 1024px) {

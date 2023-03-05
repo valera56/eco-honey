@@ -16,22 +16,11 @@ const Header = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : '')
     
   }
+
+
+
+ 
   
-
-
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
-
-  const handleClickq = () => {
-    window.scrollTo(800, 800);
-  };
-  const handleClick3 = () => {
-    window.scrollTo(1550, 1550);
-  };
-  const handleClick4 = () => {
-    window.scrollTo(2900, 2900);
-  };
   const handleClick5 = () => {
     window.scrollTo(0, 0);
   };
@@ -40,12 +29,15 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__logo">
-          <a href="#">
+          
+          <Link to="/todos" >
             <img src={logo} alt="logo" />
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/todos">
+          
             <h1 className="header__logo">Eco Honey</h1>
-          </a>
+          
+          </Link>
         </div>
         <nav className="header__nav">
           <ul className="header__list">
@@ -53,18 +45,18 @@ const Header = () => {
               <a className="header__link">{t("home")}</a>
             </Link>
             <Link to={"/catalog"} className="header__item">
-              <a onClick={handleClick} href="" className="header__link">
+              <a  href="" className="header__link">
                {t("Products")}
               </a>
             </Link>
-            <Link className="header__item">
-              <a onClick={handleClickq} href="" className="header__link">
+            <Link to={"/aboutAss"} className="header__item">
+              <a  href="" className="header__link">
                {t("About Us")}
               </a>
             </Link>
             
-            <Link className="header__item">
-              <a onClick={handleClick4} className="header__link">
+            <Link to={"/stayte"} className="header__item">
+              <a  className="header__link">
                {t("Shipping and payment")}
               </a>
             </Link>

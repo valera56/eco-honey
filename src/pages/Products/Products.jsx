@@ -10,7 +10,7 @@ const Products = () => {
     getTodos();
   }, []);
   return (
-    <section className="products">
+    <div className="products">
   <div className="products__container">
     <div className="products__title">
       <h2 className="title"> {t("Products")} </h2>
@@ -22,7 +22,7 @@ const Products = () => {
       <select>
         <option className="products__option-category"> {t("Categories")} </option>
       </select>
-      <div>
+      <div className="product__flex_wrap">
       {
          todos.map((todo) => {
         return <ProductsList todo={todo} key={todo.id} />;
@@ -31,7 +31,7 @@ const Products = () => {
       </div>
     </div>
   </div>
-</section>
+</div>
     
   
     

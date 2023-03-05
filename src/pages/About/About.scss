@@ -54,6 +54,9 @@
         color: $text-color;
         cursor: pointer;
     }
+    .about__btn a {
+        color: #1e1e1e;
+    }
 
     @media (max-width: 1024px) {
         &__info {

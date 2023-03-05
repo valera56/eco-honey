@@ -43,7 +43,10 @@
       font-size: 18px;
       line-height: 140%;
       scroll-behavior: auto;
+      text-decoration: none;
+      color: #1e1e1e;
 
+   
       @media (any-hover: hover) {
          &:hover {
             color: $main-color;
