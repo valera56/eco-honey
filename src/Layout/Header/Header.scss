@@ -2,14 +2,19 @@
 
 .header {
   
-
+.ebutton__en{
+   font-size: 20px;
+}
+.button__ru{
+   font-size: 20px;
+}
    .container {
       background: #FFA500;
       display: flex;
       justify-content: space-between;
       position: fixed;
       border-radius: 14px;
-     margin-left: 465px;
+     margin-left: 400px;
      z-index: 3;
      
      
@@ -25,12 +30,13 @@
    &__logo {
       display: flex;
       align-items: center;
+      color: #1e1e1e;
       cursor: pointer;
       gap: 8px;
    }
 
    &__logo {
-      color: $main-color;
+      color: #1e1e1e;
       font-weight: 700;
       font-size: 32px;
       line-height: 120%;

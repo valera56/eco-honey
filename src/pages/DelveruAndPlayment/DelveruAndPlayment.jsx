@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 function DelveruAndPlayment() {
   const { t } = useTranslation();
   return (
-    <div className="container">
+    <div className="">
       <h1 className="name">
         {t("We offer fast and reliable delivery options:")}
       </h1>

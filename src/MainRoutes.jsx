@@ -8,7 +8,6 @@ import CartPage from "./pages/CartPage/CartPage"
 import Main from "./Main";
 import Footer from "./Layout/Footer/Footer";
 import AboutAss from "./pages/AboutAss/AboutAss";
-import MyThird from "./pages/MyThird/MyThird";
 import DelveruAndPlayment from "./pages/DelveruAndPlayment/DelveruAndPlayment";
 import Products from "./pages/Products/Products";
 import AddComentury from "./components/AddComentury/AddComentury";
@@ -31,7 +30,6 @@ const MainRoutes = () => {
                </Route>
                <Route exact path="/mything">
                     <DelveruAndPlayment />
-                  <MyThird />
                </Route>
                <Route exact path="/todos">
                   <Main />
@@ -42,7 +40,6 @@ const MainRoutes = () => {
                </Route>
                <Route exact path="/stayte">
                <DelveruAndPlayment />
-                  <MyThird />
                </Route>
                <Route exact path="/aboutAss">
                <AboutAss/>
