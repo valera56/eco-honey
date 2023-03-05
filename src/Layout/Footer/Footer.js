@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import logo from '../../Assets/images/logo.svg';
 
 const Footer = () => {
+    
     const { t } = useTranslation();
     return (
         <footer className='footer'>

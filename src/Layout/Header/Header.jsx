@@ -1,26 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../Assets/images/logo.svg";
 import basket from "../../Assets/images/basket.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { todosContext } from "../../contexts/TodosComtext";
 const Header = () => {
-
+  const {getTodosRu,getTodosEn} = useContext(todosContext)
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = async () => {
     i18n.changeLanguage(i18n.language === 'ru' ? 'en' : '')
+    getTodosEn()
     
   }
 
   const toggRuleLanguage = async () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : '')
-    
+    getTodosRu()
   }
 
-
-
- 
-  
   const handleClick5 = () => {
     window.scrollTo(0, 0);
   };
@@ -70,6 +68,7 @@ const Header = () => {
               <img src={basket} alt="basket" />
             </Link>
           </a>
+          <a href="http://18.182.53.101/admin/login/?next=/admin/">admin</a>
           <button className="header__burger-btn">
             <svg
               width="24"

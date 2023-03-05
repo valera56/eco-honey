@@ -21,6 +21,7 @@ const handeleClick = () => {
                             </div>
                                 <div className="products__flex">
                                     <span>{props.todo.price}</span>
+                                    <span>{props.todo.category}</span>
                                     <span>{props.todo.volume}</span>
                                 </div>
                                 <div className="products__btn">

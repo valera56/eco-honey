@@ -11,7 +11,8 @@ const Home = () => {
     const { t } = useTranslation();
     
     return (
-        <section className='home'>
+        <div>
+<section className='home'>
             <div className ="container">
                 <div className="home__container">
                 <div className ="home__content">
@@ -24,8 +25,13 @@ const Home = () => {
                     <img className='home__images' src={main} alt="Main"/>
                 </div>
                 </div>
+                
             </div>
         </section>
+       
+        </div>
+        
+        
     );
 };
 

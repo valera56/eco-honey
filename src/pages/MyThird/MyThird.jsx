@@ -58,9 +58,20 @@ function MyThird() {
       </div>
       <br /><br/><br /><br/><br /><br/>
       <div className='img_shopping_and_payment'>
-        <img
+        {/* <img
           style={{display: 'flex', justifyContent: 'center'}}
-         src={locaionMap} />
+         src={locaionMap} /> */}
+         <div>
+         <section class="section-map">
+        
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A763462f86d9b653ed6c5061c05f3933237a812ddc849ac08409e3c9bfbdf98ac&amp;source=constructor"
+          width="1200"
+          height="400"
+          frameborder="0"
+        ></iframe>
+      </section>
+         </div>
       </div><br /><br/><br/>
       <div className='courier_info'>
         <ul>

@@ -1,11 +1,17 @@
 
 
 .header {
-   padding: 16px 0;
+  
 
    .container {
+      background: #FFA500;
       display: flex;
       justify-content: space-between;
+      position: fixed;
+      border-radius: 14px;
+     margin-left: 465px;
+     z-index: 3;
+     
      
    }
   

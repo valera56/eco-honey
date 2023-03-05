@@ -4,10 +4,11 @@ import { todosContext } from "../../contexts/TodosComtext";
 import ProductsList from "../ProductsList/ProductsList";
 
 const Products = () => {
-  const { getTodos, todos } = useContext(todosContext);
+  const { getTodos, todos, getTodosEn, getTodosRu } = useContext(todosContext);
   const { t } = useTranslation();
   useEffect(() => {
-    getTodos();
+    getTodosRu()
+    
   }, []);
   return (
     <div className="products">

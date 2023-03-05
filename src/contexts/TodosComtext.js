@@ -284,6 +284,28 @@ const TodosContextProvider = ({ children }) => {
 
     })
   }
+
+  const getTodosRu = async () => {
+    const { data } = await axios(`http://18.182.53.101/api/products/?category=11`);
+    console.log(data)
+    dispatch({
+      type: "GET_TODOS",
+      payload: data.results
+      
+
+    })
+  }
+  const getTodosEn = async () => {
+    const { data } = await axios(`http://18.182.53.101/api/products/?category=10`);
+    console.log(data)
+    dispatch({
+      type: "GET_TODOS",
+      payload: data.results
+      
+
+    })
+  }
+  
   
 
   return (
@@ -311,6 +333,8 @@ const TodosContextProvider = ({ children }) => {
         getCartProducts,
         incrementCartProduct,
         getTodos,
+        getTodosEn,
+        getTodosRu
       }}
     >
       {children}

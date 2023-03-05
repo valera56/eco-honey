@@ -52,6 +52,7 @@ const Cart = () => {
 //  getTodos()
 // })
 
+// const [sum, setSus] = useState(item.price)
 
   return (
     <div className = "cart">
